@@ -1,26 +1,25 @@
+// const numbers = [2,3,65,7,99,65,47,8,9];
+// const SquareNumbers = numbers.map(sweetNamber =>{return sweetNamber **2})
+// console.log(SquareNumbers)
 
-let textcont = 0;
-var par = document.querySelector("p")
+// let numbers = [2, 3, 65, 7, 99, 65, 47, 8, 9, 23, 11];
+// let newNumbers = numbers.filter(function(f){
+//     return f>10 && f <35
+// })
+// console.log(newNumbers)
 
-function plus() { 
-let newf = +par.textContent + 1;
-par.textContent = newf;
-}
+// let stroki = ["react","node","vue","angular","dd"];
+// let lengthStroka = stroki.reduce(function (a, b){
+//     let won;
+//     if (a.length > b.length){
+//     return a
+//     }
+//     else
+//         return b
 
-function minus() {
+// });
+// console.log(lengthStroka)
 
-    let newf = +par.textContent - 1;
-    par.textContent = newf;  
-    if (newf < 0){
-         par.textContent = 0;
-         alert("Минимальное число 0")
-        
-    }
-
-
-}
-let btn1 = document.querySelector(".ee");
-let btn2 = document.querySelector(".e");
-let result = par.textContent = textcont;
-btn1.addEventListener('click', plus);
-btn2.addEventListener('click', minus);
+let stroki = ["react", "node", "vue", "angular", "dd"];
+const Upper = stroki.map(sweetString => { return sweetString.toUpperCase() })
+console.log(Upper)
