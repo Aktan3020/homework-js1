@@ -1,25 +1,44 @@
-// const numbers = [2,3,65,7,99,65,47,8,9];
-// const SquareNumbers = numbers.map(sweetNamber =>{return sweetNamber **2})
-// console.log(SquareNumbers)
+class Worker {
+    constructor(name, surname, rate, days) {
+        this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
+    }
+    getSalary(rate, days) {
+        let salary = this.rate * this.days;
+        return salary;
+    }
+}
+let Vanua = new Worker('Vanua', 'Sokolov', 100, 15);
+console.log(Vanua.getSalary());
+let Oleg = new Worker('Oleg', 'Kusnesov', 300, 15);
+console.log(Oleg.getSalary());
 
-// let numbers = [2, 3, 65, 7, 99, 65, 47, 8, 9, 23, 11];
-// let newNumbers = numbers.filter(function(f){
-//     return f>10 && f <35
-// })
-// console.log(newNumbers)
-
-// let stroki = ["react","node","vue","angular","dd"];
-// let lengthStroka = stroki.reduce(function (a, b){
-//     let won;
-//     if (a.length > b.length){
-//     return a
-//     }
-//     else
-//         return b
-
-// });
-// console.log(lengthStroka)
-
-let stroki = ["react", "node", "vue", "angular", "dd"];
-const Upper = stroki.map(sweetString => { return sweetString.toUpperCase() })
-console.log(Upper)
+class MyString {
+    reverse(str) {
+        let reversStr = '';
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversStr += str[i];
+        }
+        return reversStr;
+    }
+    ucFirst(str) {
+        let newStr = str[0].toUpperCase() + str.slice(1);
+        return newStr;
+    }
+    ucWords(str) {
+        let arr = str.split(' ');
+        let strArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            let a = arr[i];
+            let newStr = a[0].toUpperCase() + a.slice(1);
+            strArr.push(newStr);
+        }
+        return strArr.join(' ');
+    }
+}
+let str = new MyString();
+console.log(str.reverse('he she it'));
+console.log(str.ucFirst('he she it'));
+console.log(str.ucWords('he, she, it'));
